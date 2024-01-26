@@ -16,7 +16,7 @@ class BackgroundColorState {
   }
 
   factory BackgroundColorState.initial() {
-    return BackgroundColorState(backgroundColor: Colors.black);
+    return BackgroundColorState(backgroundColor: Colors.yellow);
   }
 
   @override

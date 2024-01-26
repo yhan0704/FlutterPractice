@@ -14,11 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
         providers: [
-          BlocProvider<BackgroundColorCubit>(
-            create: (context) => BackgroundColorCubit(),
-          ),
           BlocProvider<CounterCubit>(
             create: (context) => CounterCubit(),
+          ),
+          BlocProvider<BackgroundColorCubit>(
+            create: (context) => BackgroundColorCubit(
+                counterCubit: context.read<CounterCubit>()),
           ),
         ],
         child: const MaterialApp(
